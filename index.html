@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/b8e9058e85.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- ---------------------------------header------------------------------- -->
+    <div id="header"> 
+        <div class="container">
+            <nav>
+                <img src="img/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <!-- <li><a href="#services">Services</a></li> -->
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Student</p>
+                <h1>Hi, I'm <span>Pugazhendhi K</span></h1>
+            </div>
+        </div>
+    </div>
+    <!-- ---------------------about----------------------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="img/image-1.jpeg" alt="profile-image">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I'm a final year student at Anand Institute of Higher Technology, currently pursuing
+                         a Bachelor of Engineering in Computer Science and Engineering. My passion for
+                          technology and creativity has led me to specialize in front-end web development, 
+                          where I craft visually appealing and user-friendly websites.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <!-- <p class="tab-links" onclick="opentab('experience')">Experience</p> -->
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Development</span><br>HTML, CSS, Java Script</li>
+                            <li><span>Programming Language</span><br>Python</li>
+                            <li><span>Software Tools</span><br>Git</li>
+                        </ul>
+                    </div>
+                    <!-- <div class="tab-contents"  id="experience">
+                        <ul>
+                            <li><span>Mini Project</span><br>Courier Management System</li>
+                            <li><span>Portfolio</span><br>My Personal Portfolio</li>
+                        </ul>
+                    </div> -->
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2020 - 2024</span><br>Anand Institute Of Higher Technology</li>
+                            <li><span>Bachelor of Engineering</span><br>Computer Science and Engineering</li>
+                            <li><span>City</span><br>Chennai</li>
+                            <li><span>State</span><br>Tamil Nadu</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ----------------------------services---------------------------------- -->
+
+    <!-- <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Front-End Web Development</h2>
+                    <p>Whether you need a stunning website from scratch or a redesign 
+                        of your existing site, I offer creative and user-centric web design
+                         solutions. I'll work closely with you to create a visually appealing 
+                         and responsive website that represents your brand and engages your audience.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>Mini Project</h2>
+                    <p>Looking for a custom web application or a mini project?
+                         I specialize in developing web-based solutions tailored to your 
+                         specific needs. From project planning to implementation, I'll ensure your
+                          web application is efficient, functional, and user-friendly.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                
+            </div>
+        </div>
+    </div> -->
+
+
+    <!-- ----------------------------portfolio--------------------? -->
+    
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="img/portfolio-work-1.png" alt="work1">
+                    <div class="layer">
+                        <h3>Courier Management System</h3>
+                        <p>My Courier Management System project is a comprehensive solution designed to 
+                            streamline and enhance the courier and logistics processes. It includes features 
+                            such as real-time package tracking, automated order management, and efficient
+                             route planning. The system is built for businesses of all sizes to optimize
+                              their courier operations, improve customer satisfaction, and reduce operational
+                            costs.</p>
+                        <a href="https://github.com/PugazhendhiK03/mini-project.git"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="img/portfolio-work-2.png" alt="work2">
+                    <div class="layer">
+                        <h3>Enhancing Surveillance System with Object Detection and Face Recognition</h3>
+                        <p>It is an Python Flask based web application to reduce the time of the user
+                             in searching for individual person or object frame by frame and capture images
+                              of them. Technologies used (Python, Flask, HTML, CSS, JavaScript,
+                            SQLite)</p>
+                        <a href="https://github.com/PugazhendhiK03/final-year-project.git" onclick="myFunction('alertMessage')"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <!-- <div class="work">
+                    <img src="image/portfolio-work-3.png" alt="work3">
+                    <div class="layer">
+                        <h3>Movie or Series Stream Site Design</h3>
+                        <p>My Movie or Series Stream Site Design project is all about creating a 
+                            seamless and user-friendly platform for movie and series enthusiasts. 
+                            I focus on delivering an immersive streaming experience with a modern and 
+                            intuitive design. From user-friendly navigation to responsive video playback, 
+                            I aim to enhance your entertainment journey.</p>
+                        <a href="https://github.com/PugazhendhiK03/movie-or-series-stream-web-design"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div> -->
+            </div>
+            <!-- <a href="#" class="btn">See more</a> -->
+        </div>
+    </div>
+<!-- -------------------------------------------contact-------------------------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1>Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>pugazhendhikrishna03@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>+91 7339541974</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/in/pugazhendhi2003"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://instagram.com/im_pugazhendhi?utm_source=qr&igshid=OGU0MmVlOWVjOQ=="><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <a href="./doc/Pugazh Resume.pdf" download class="btn btn2">Download Resume</a>
+            </div>
+            <div class="contact-right">
+                <!-- <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form> -->
+                <form class="contactForm" id="contactForm">
+                <div>
+                    <label for="name">Name :</label>
+                    <input type="text" id="name" required name="name">
+                </div>
+                <div>
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" required name="email">
+                </div>
+                <div>
+                    <label for="message">Message :</label>
+                    <textarea name="message"  id="message" required cols="30" rows="4"></textarea>
+                </div>
+                <div>
+                    <button type="submit" class="c-btn">Submit</button>
+                </div>
+            </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+        
+    </div>
+    <div class="copyright">
+        <p>Copyright & copy <script>
+            document.write(new Date().getFullYear())
+        </script> all rights reserved</p>
+    </div>
+</div>
+
+
+
+
+<script src="./js/script.js"></script>
+</body>
+</html>
