@@ -1,3 +1,20 @@
+// side bar
+document.addEventListener("DOMContentLoaded", function () {
+    const menuIcon = document.getElementById("menu-icon");
+    const sidebar = document.getElementById("sidebar");
+    const closeBtn = document.getElementById("close-btn");
+
+    menuIcon.addEventListener("click", function () {
+        sidebar.classList.toggle("open");
+    });
+
+    closeBtn.addEventListener("click", function () {
+        sidebar.classList.remove("open");
+    });
+});
+
+
+// contact form
 function myFunction() {
     alert("Project is on Progress !");
   }
@@ -19,3 +36,5 @@ function myFunction() {
       document.getElementById
       ('contactForm').reset();
   });
+
+
