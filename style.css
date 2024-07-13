@@ -122,14 +122,14 @@ body {
     justify-content: space-around;
     align-items: center;
     padding: 1rem;
-    border-radius: 20px;
+    border-radius: 25px;
     background: var(--color3);
 }
 
 .profile > img{
     width: 150px;
     height: 150px;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 
