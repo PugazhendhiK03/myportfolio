@@ -96,6 +96,10 @@ body {
     background: var(--color4);
 }
 
+.chat-btn > a {
+    color: var(--color2);
+}
+
 .menu-icon{
     display: none;
     font-size: 1.4rem;

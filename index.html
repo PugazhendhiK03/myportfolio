@@ -1,790 +1,230 @@
-:root {
-    --color1: #1a1a1a;
-    --color2: aliceblue;
-    --color3: rgb(31, 30, 30);
-    --color4: linear-gradient(to bottom right, rgb(102, 141, 192), rgb(124, 173, 192));
-    --color5: rgba(23, 119, 175, 0.667);
-    --color6: rgba(24, 164, 199, 0.89);
-    --color7: rgba(255, 33, 33, 0.667);
-}
-
-* {
-    list-style: none;
-    text-decoration: none;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    background: var(--color1);
-    color: var(--color2);
-    padding: 0;
-    margin: 0;
-}
-
-
-.header{
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    width: 100%;
-    z-index: 1;
-}
-
-.navigation{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 2.5rem;
-}
-
-.logo{
-    width: 3rem;
-    height: 3rem;
-}
-
-.logo > img{
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome Icon Style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     
-    /* filter: invert(100%); */
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-}
-
-.navlist{
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    padding: 1rem;
-
-    /* background: rgba(255, 255, 255, 0.2); 
-  border-radius: 10px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
-  backdrop-filter: blur(1px);
-  -webkit-backdrop-filter: blur(1px); 
-  border: 1px solid rgba(255, 255, 255, 0.3); */
-}
-
-.navlist > li > a {
-    color: var(--color2);
-    font-size: 16px;
-    padding: .5rem;
-    /* background: rgba(255, 255, 255, 0.2);  */
-  border-radius: 10px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px); 
-  /* border: 1px solid rgba(255, 255, 255, 0.3); */
-}
-
-
-.chat-btn{
-    display: flex;
-    background: none;
-    border: none;
-    align-items: center;
-    gap: .5rem;
-    font-size: 16px;
-    color: var(--color2);
-    cursor: pointer;
-    border-radius: 10px;
-    background: var(--color4);
-}
-
-.chat-btn > a {
-    color: var(--color2);
-}
-
-.menu-icon{
-    display: none;
-    font-size: 1.4rem;
-}
-
-.close-btn > i {
-    font-size: 1.4rem;
-}
-
-.profile{
-    display: flex;
-    flex-direction: row;
-    position: fixed;
-    top: 7rem;
-    left: 0;
-}
-
-.profile{
-    margin: 0 2rem;
-    width: 20%;
-    height: 480px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    padding: 1rem;
-    border-radius: 25px;
-    background: var(--color3);
-}
-
-.profile > img{
-    width: 150px;
-    height: 150px;
-    border-radius: 10px;
-}
-
-
-
-.resume-btn{
-    font-size: 16px;
-    font-weight: 500;
-    border: none;
-    height: 3rem;
-    color: var(--color2);
-    border-radius: 10px;
-    background: var(--color4);
-    cursor: pointer;
-}
-
-.resume-btn > a{
-    font-size: 16px;
-    color: var(--color2);
-    font-weight: 500;
-}
-
-.btn{
-    font-size: 16px;
-    font-weight: 500;
-    border: none;
-    height: 3rem;
-    color: var(--color2);
-    border-radius: 10px;
-    background: var(--color4);
-}
-
-.social-icon{
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-
-}
-
-.social-icon > li > a {
-    color: var(--color2);
-    font-size: 1.4rem;
-    border: 1px solid var(--color2);
-    padding: .3rem .6rem;
-    border-radius: 50%;
-    
-    display: inline-block;
-    transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.social-icon > li > a:hover{
-    transform: scale(1.2);
-    animation: bounce 0.6s;
-}
-
-
-.main{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-}
-
-
-.m-content{
-    width: 75%;
-    position: absolute;
-    right: 0;
-    top: 7rem;
-}
-
-.intro{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    height: 450px;
-    /* background-color: red; */
-    justify-content: center;
-    padding: 3rem;
-}
-
-.intro > span{
-    color: var(--color6);
-}
-
-.lets{
-    background: var(--color2); /* Gradient colors */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
-}
-
-.i-design{
-    border: 1px solid var(--color5);
-    padding: .5rem;
-    border-radius: 30px;
-    width: 10rem;
-    display: flex;
-    align-items: center;
-    height: 3rem;
-    justify-content: center;
-}
-
-.i-design > span{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.i-design > span > img{
-    width: 30px;
-    filter: invert(100%);
-}
-
-.btns{
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-}
-
-.btn{
-    padding: .5rem 1rem;
-}
-
-.p-lets{
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.i-greet{
-    font-size: 30px;
-}
-
-.i-name{
-    font-size: 40px;
-    font-weight: 500;
-}
-
-.i-role{
-    font-size: 30px;
-}
-
-
-.about{
-    padding: 3rem;
-}
-
-
-
-/* Sidebar */
-#sidebar {
-    display: none;
-    flex-direction: column;
-    gap: 20px;
-    position: fixed;
-    top: 0;
-    right: -250px;
-    width: 250px;
-    height: 100%;
-    background: var(--color1);
-    padding: 20px;
-    transition: right 0.3s;
-    z-index: 1000;
-}
-
-#sidebar.open {
-    right: 0;
-}
-
-#sidebar .navlist {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-#sidebar .navlist li a {
-    color: var(--color2);
-}
-
-#sidebar .close-btn {
-    align-self: flex-start;
-    font-size: 24px;
-    cursor: pointer;
-    padding: 0 .5rem;
-
-    background: rgba(255, 255, 255, 0.2); 
-  border-radius: 10px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
-  backdrop-filter: blur(1px);
-  -webkit-backdrop-filter: blur(1px); 
-  border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-
-
-
-
-
-
-/* about */
-
-.about{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.a-content{
-    padding: 2rem 1rem;
-    text-align: justify;
-    font-size: 18px;
-}
-
-.a-title{
-    font-size: 30px;
-}
-
-.e-title{
-    font-size: 24px;
-    color: var(--color6);
-}
-
-.e-grid{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    margin: 1rem;
-}
-
-.e-card {
-    width: 100%;
-    background: var(--color3);
-    padding: 10px 20px;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 1rem;
-    border-radius: 10px;
-    border: 1px solid var(--color5);
-    transition: background-color 0.3s, transform 0.3s; 
-}
-
-
-.e-card:hover {
-    background-color: var(--color4); 
-    transform: rotate(-5deg); 
-}
-
-.e-year{
-    font-weight: bold;
-    color: var(--color6);
-}
-.e-year{
-    font-weight: bold;
-}
-
-
-
-.i-title{
-    font-size: 20px;
-    color: var(--color6);
-    padding: 1rem 0rem;
-}
-.i-content{
-    padding: 1rem;
-    font-size: 18px;
-}
-
-
-/* skills */
-
-.skills{
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    gap: 1rem;
-}
-
-.skills > h2{
-    font-size: 30px;
-}
-
-.s-grid{
-    display: grid;
-    grid-template-columns: repeat(6, 2fr);
-    align-items: center;
-    justify-content: center;
-}
-
-.s-card{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    background: var(--color3);
-    margin: 10px;
-    border-radius: 10px;
-    transition: background-color 0.5s, transform 0.5s;
-}
-
-.s-card:hover{
-    background-color: var(--color4); 
-    /* transform: rotate(-5deg);  */
-    transform: scale(1.1);
-    border: 1px solid var(--color6);
-}
-
-.s-card > img{
-    width: 100px;
-    height: 100px;
-    transform: scale(0.9);
-}
-
-
-.js{
-    border-radius: 50%;
-}
-
-.github{
-    border-radius: 50%;
-}
-
-
-
-/* projects */
-
-
-
-
-/* contact */
-.contact{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 2rem;
-    align-items: center;
-}
-
-.c-title{
-    display: flex;
-    width: 100%;
-}
-
-.c-title > h2{
-    font-size: 30px;
-}
-
-
-.contactForm{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    background: var(--color3);
-    padding: 2rem;
-    border-radius: 10px;
-}
-
-.contactForm > div{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-}
-
-.contactForm > div > label{
-    font-size: 20px;
-}
-
-.contactForm > div > input{
-    font-size: 16px;
-    font-family: 'Poppins', sans-serif;
-    padding: .5rem;
-    border: none;
-    border-radius: 4px;
-}
-
-.contactForm > div > textarea{
-    font-size: 16px;
-    font-family: 'Poppins', sans-serif;
-    padding: .5rem;
-    border: none;
-    border-radius: 4px;
-}
-
-
-.c-btn{
-    font-size: 18px;
-    padding: 6px 8px;
-    cursor: pointer;
-    color: var(--color2);
-    border: none;
-    background: var(--color4);
-    border-radius: 5px;
-}
-
-.msg{
-    font-size: 16px;
-    color: var(--color7);
-}
-
-
-
-
-
-
-
-/* Responsive Styles */
-@media screen and (max-width: 980px) {
-    .navlist {
-        display: none;
-    }
-    .menu-icon {
-        display: block;
-    }
-    #sidebar {
-        display: flex;
-    }
-    .main{
-        flex-direction: column;
-        align-items: center;
-    }
-    .profile{
-        position: relative;
-        width: 25%;
-    }
-    .m-content{
-        position: relative;
-        top: 10rem;
-    }
-
-    .profile{
-        width: 30%;
-    }
-}
-
-@media screen and (max-width: 1150px){
-    .s-grid{
-        grid-template-columns: repeat(4, 2fr);
-    }
-}
-
-@media screen and (max-width: 1024px){
-    .navlist{
-        gap: 1rem;
-    }
-    .e-grid{
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media screen and (max-width: 768px){
-    .profile{
-        width: 40%;
-    }
-    .m-content{
-        top: 7rem;
-        width: 100%;
-    }
-    .lets{
-        font-size: 14px;
-    }
-    .s-grid{
-        grid-template-columns: repeat(4, 2fr);
-    }
-    .a-content, .i-content{
-        font-size: 16px;
-    }
-}
-
-@media screen and (max-width: 638px){
-    .profile{
-        width: 55%;
-    }
-    .s-grid{
-        grid-template-columns: repeat(3, 2fr);
-    }
-}
-
-@media screen and (max-width:550px){
-    .i-greet{
-        font-size: 25px;
-    }
-    .i-name{
-        font-size: 35px;
-    }
-    .i-role{
-        font-size: 25px;
-    }
-    .e-grid{
-        grid-template-columns: repeat(1, 1fr);
-    }
-    .a-content{
-        font-size: 16px;
-    }
-}
-
-@media screen and (max-width:500px){
-    .i-greet{
-        font-size: 20px;
-    }
-    .i-name{
-        font-size: 25px;
-    }
-    .i-role{
-        font-size: 20px;
-    }
-    .contactForm{
-        width: 100%;
-    }
-    .c-container{
-        display: flex;
-        width: 80%;
-        align-items: center;
-        justify-content: center;
-    }
-    .contactForm > div {
-        gap: 1rem;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .contactForm > div > label{
-        font-size: 16px;
-    }
-    .contactForm > div > input{
-        font-size: 16px;
-        padding: 2px;
-        border-radius: 2px;
-    }
-    .contactForm > div > textarea{
-        font-size: 16px;
-        padding: 2px;
-        border-radius: 2px;
-    }
-}
-
-@media screen and (max-width: 425px){
-    .profile{
-        width: 80%;
-    }
-    .lets{
-        font-size: 14px;
-    }
-    .resume-btn{
-        font-size: 14px;
-    }
-    .i-design{
-        width: 9rem;
-    }
-    .a-content{
-        font-size: 14px;
-    }
-    .a-title{
-        font-size: 25px;
-    }
-    .e-title{
-        font-size: 19px;
-    }
-    .e-card{
-        font-size: 16px;
-    }
-    .s-grid{
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .contactForm > div > input{
-        width: 10rem;
-    }
-    .contactForm > div > textarea{
-        width: 10rem;
-    }
-    .c-btn{
-        font-size: 16px;
-    }
-    .a-content, .i-content{
-        font-size: 14px;
-    }
-}
-
-@media screen and (max-width: 375px){
-    .profile{
-        width: 85%;
-    }
-    .i-name{
-        font-size: 20px;
-    }
-    .i-role{
-        font-size: 18px;
-    }
-    .i-design > .lets > img{
-        width: 17px;
-    }
-    .s-grid{
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .contactForm > div > input{
-        width: 8rem;
-    }
-    .contactForm > div > textarea{
-        width: 8rem;
-    }
-    .c-btn{
-        font-size: 16px;
-    }
-}
-
-@media screen and (max-width: 320px){
-    .profile{
-        width: 85%;
-    }
-    .i-name{
-        font-size: 20px;
-    }
-    .i-role{
-        font-size: 16px;
-    }
-    .i-design > .lets > img{
-        width: 17px;
-    }
-    .i-design{
-        width: 7.5rem;
-    }
-    .i-design > .lets{
-        font-size: 12px;
-    }
-    .resume-btn{
-        font-size: 12px;
-    }
-    .s-grid{
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-
-
-/* Optional: Add some bounce effect */
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-10px);
-    }
-    60% {
-        transform: translateY(-5px);
-    }
-}
-
-
+</head>
+<body>
+
+<!-- header -->
+<section class="header">
+    <div class="navigation">
+        <div class="logo">
+            <img src="./img/Logo.png" alt="Logo">
+        </div>
+
+        <div class="navbar" id="navbar">
+            <ul class="navlist" id="navlist">
+                <li><a href="#intro">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <div><button class="chat-btn btn"><a href="https://wa.me/7339541974?text=Hello%2C%20I%20would%20like%20to%20chat%20with%20you" target="_blank">Let's Chat</a> <svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#fff"><path d="M240-400h320v-80H240v80Zm0-120h480v-80H240v80Zm0-120h480v-80H240v80ZM80-80v-720q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H240L80-80Zm126-240h594v-480H160v525l46-45Zm-46 0v-480 480Z"/></svg></button></div>
+            </ul>
+        </div>
+        <div class="menu-icon" id="menu-icon">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+
+</section>
+
+<!-- sidebar -->
+<div id="sidebar">
+    <div class="close-btn" id="close-btn">
+        <i class="fas fa-times"></i>
+    </div>
+    <ul class="navlist">
+        <li><a href="#intro">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <div><button class="chat-btn btn"><a href="https://wa.me/7339541974?text=Hello%2C%20I%20would%20like%20to%20chat%20with%20you" target="_blank">Let's Chat!</a> <svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#fff"><path d="M240-400h320v-80H240v80Zm0-120h480v-80H240v80Zm0-120h480v-80H240v80ZM80-80v-720q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H240L80-80Zm126-240h594v-480H160v525l46-45Zm-46 0v-480 480Z"/></svg></button></div>
+    </ul>
+</div>
+
+
+
+<!-- section 2 -->
+<section class="main">
+    <div class="profile">
+        
+        <img src="./img/profile.jpeg" alt="profile">
+            <p class="name">Pugazhendhi K</p>
+            <p class="role">Front-End Developer</p>
+            <ul class="social-icon">
+                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                <li><a href="#"><i class="fa-regular fa-envelope"></i></a></li>
+            </ul>
+            <button class="p-lets btn">Let's work together!</button>
+        
+    </div>
+
+    <div class="m-content">
+        
+        <!-- home -->
+        <div class="intro" id="intro">
+            <div class="i-design">
+                <span class="lets"><img src="./img/star.png" alt=""> Let's Meet!</span>
+            </div>
+            <span class="i-greet">Hi, I'm</span>
+            <span class="i-name">PUGAZHENDHI K</span>
+            <span class="i-role"><span>Front-End</span> Developer</span>
+            <div class="btns">
+                <div class="i-design">
+                    <span class="lets">My Work <i class="fa-solid fa-qrcode"></i></span>
+                </div>
+                <button class="resume-btn btn"><a href="./pdf/Resume.pdf" download>Download CV</a></button>
+            </div>
+        </div>
+
+        <!-- about -->
+         <div class="about" id="about">
+            <div class="about1">
+                <h2 class="a-title">About Me</h2>
+            <p class="a-content">Hi, I'm Pugazhendhi, a Web Developer and Designer with a passion 
+                for Front-End Developer and a Fresher in this field, I've had the opportunity 
+                to work on finalyear projects. I specialize in Front-End Development, and I am constantly 
+                looking to learn and grow in my field.
+            </p>
+            </div>
+            <!-- education -->
+            <div class="education">
+                <h3 class="e-title">Education</h3>
+                <div class="e-grid">
+                    <div class="e-card">
+                        <span class="e-year">2020 - 2024</span>
+                        <span class="e-degree">B.E - CSE</span>
+                        <span class="e-school">Anand Institute Of Higher Technology</span>
+
+                    </div>
+                    <div class="e-card">
+                        <span class="e-year">2019 - 2020</span>
+                        <span class="e-degree">HSC</span>
+                        <span class="e-school">Rathinagiri Bageerathan Matric Hr Sec School</span>
+
+                    </div>
+                    <div class="e-card">
+                        <span class="e-year">2017 - 2018</span>
+                        <span class="e-degree">SSLC</span>
+                        <span class="e-school">Rathinagiri Bageerathan Matric Hr Sec School</span>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- intrest -->
+             <div class="intrest">
+                <h3 class="i-title">Interests</h3>
+                <span class="i-content">
+                    When I'm not working, I enjoy Drawings, Designing, Learn about new designs in UI.
+                </span>
+             </div>
+
+         </div>
+
+         <!-- skills -->
+          <div class="skills" id="skills">
+            <h2 class="s-title">Skills</h2>
+            <div class="s-grid">
+                <div class="s-card">
+                    <img src="./img/html.png" class="html" alt="HTML">
+                    <p class="s-name">HTML</p>
+                </div>
+                <div class="s-card">
+                    <img src="./img/css.png" class="css" alt="CSS">
+                    <p class="s-name">CSS</p>
+                </div>
+                <div class="s-card">
+                    <img src="./img/js.png" class="js" alt="HTML">
+                    <p class="s-name">JS</p>
+                </div>
+                <div class="s-card">
+                    <img src="./img/py.png" class="python" alt="HTML">
+                    <p class="s-name">PYTHON</p>
+                </div>
+                <div class="s-card">
+                    <img src="./img/react.png" class="react" alt="HTML">
+                    <p class="s-name">REACT</p>
+                </div>
+                <div class="s-card">
+                    <img src="./img/git.png" class="git" alt="git">
+                    <p class="s-name">GIT</p>
+                </div>
+                <div class="s-card">
+                    <img src="./img/github.png" class="github" alt="github">
+                    <p class="s-name">GIT HUB</p>
+                </div>
+                <div class="s-card">
+                    <img src="./img/MySQL.jpg" class="mysql" alt="mysql">
+                    <p class="s-name">MY SQL</p>
+                </div>
+                <div class="s-card">
+                    <img src="./img/VSCode.png" class="vscode" alt="vscode">
+                    <p class="s-name">VS CODE</p>
+                </div>
+                <!-- add more -->
+            </div>
+          </div>
+
+          <!-- projects -->
+          
+
+          <!-- contact -->
+           <div class="contact" id="contact">
+            <div class="c-title">
+                <h2>Contact Me</h2>
+            </div>
+                    <div class="c-container">
+                    
+                                <form class="contactForm" id="contactForm">
+                                <div>
+                                    <label for="name">Name :</label>
+                                    <input type="text" id="name" required name="name">
+                                </div>
+                                <div>
+                                    <label for="email">Email :</label>
+                                    <input type="email" id="email" required name="email">
+                                </div>
+                                <div>
+                                    <label for="message">Message :</label>
+                                    <textarea name="message"  id="message" required cols="30" rows="4"></textarea>
+                                </div>
+                                <div>
+                                    <button type="submit" class="c-btn">Submit</button>
+                                </div>
+                            </form>
+                                <span id="msg"></span>
+                    </div>
+           </div>
+
+
+    </div>
+</section>
+
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
 
 
 
