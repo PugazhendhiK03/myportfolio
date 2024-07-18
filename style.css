@@ -26,6 +26,7 @@ body {
     color: var(--color2);
     padding: 0;
     margin: 0;
+    height: 100%;
 }
 
 
@@ -232,7 +233,8 @@ body {
 .social-icon > li > a {
     color: var(--color2);
     font-size: 1.4rem;
-    border: 1px solid var(--color2);
+    /* border: 1px solid var(--color2); */
+    background: var(--color1);
     padding: .3rem .6rem;
     border-radius: 50%;
     
@@ -642,7 +644,7 @@ body {
     border-radius: 10px;
     padding: 10px;
     box-sizing: border-box;
-    overflow: hidden; /* Hide overflow content */
+    overflow: hidden;
   }
   
   .project-card-1 {
@@ -690,8 +692,6 @@ body {
   .project-card:hover{
     border-radius: 10px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
-  /* backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px); */
   }
 
 .project-title{
@@ -714,7 +714,7 @@ body {
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    height: 3rem; /* Adjust height to match the number of lines */
+    height: 3rem; 
   }
 
   .p-see-all{
@@ -738,6 +738,44 @@ body {
     font-size: 16px;
 }
 
+
+
+
+/* footer */
+footer {
+    padding: 50px 20px;
+    text-align: center;
+    background: var(--color1);
+    margin-top: 20px;
+    color: var(--color2);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.footer1{
+    display: flex;
+    align-items: center;
+}
+
+.footer2{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.social-link{
+    color: var(--color2);
+    font-size: 1.4rem;
+    /* border: 1px solid var(--color2); */
+    background: var(--color1);
+    padding: .3rem .6rem;
+    gap: 1rem;
+    border-radius: 50%;
+    flex-direction: row;
+    display: flex;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
 
 
 
@@ -802,6 +840,9 @@ body {
     }
     .a-content, .i-content{
         font-size: 16px;
+    }
+    footer{
+        flex-direction: column;
     }
 }
 
@@ -997,12 +1038,8 @@ body {
 
 
 
-:root {
-    --color1: #1a1a1a;
-    --color2: aliceblue;
-    --color3: rgb(31, 30, 30);
-  }
-  
+
+  /* scroll bar */
   ::-webkit-scrollbar {
     width: 12px;
   }
