@@ -18,6 +18,7 @@
      <link rel="stylesheet" href="./css/main.css">
      <link rel="stylesheet" href="./css/header.css">
      <link rel="stylesheet" href="./css/intro.css">
+     <link rel="stylesheet" href="./css/about.css">
 </head>
 <body>
 <header class="navbar">
@@ -39,17 +40,24 @@
 <main>
     <section class="intro" id="intro">
         <div class="intro-left">
+            <span class="introTitle">FrontEnd Developer</span>
+            <span class="introGreet">Hey, I'm</span>
             <span class="introName">PUGAZHENDHI K</span>
             <span class="introDesc">
                 I am a Web Developer and a Programmer. I am passionate about coding and I love to learn new things.
             </span>
             <div class="btns">
-                <a href="#">
+                <a href="pdf/PugazhendhiResume.pdf">
                     <button class="cvBtn">Download CV</button>
                 </a>
                 <a href="#">
                     <button class="contactBtn">Contact Me</button>
                 </a>
+            </div>
+            <div class="socialIcons">
+                <li><a href="https://github.com/PugazhendhiK03"><i class="fa-brands fa-github"></i></a></li>
+                <li><a href="https://www.instagram.com/pugazh_0308?igsh=MW10bjFla21wcXBldw=="><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/pugazhendhi2003"><i class="fa-brands fa-linkedin"></i></a></li>
             </div>
         </div>
         <div class="intro-right">
@@ -58,7 +66,67 @@
     </section>
     
     <section class="about" id="about">
+        <span class="aboutTitle">About Me</span>
 
+        <div class="aboutContainer">
+            <div class="about-left">
+                <img src="img/about.png" alt="aboutImg" class="aboutImg">
+            </div>
+            <div class="about-right">
+                <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="personal">Personal Info</button>
+            <button class="tab-btn" data-tab="qualifications">Qualifications</button>
+            <button class="tab-btn" data-tab="skills">Skills</button>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="tab-content active" id="personal">
+            <h2>Buliding Innovative Solutions with a Fresh Perspective</h2>
+            <p>I specialize in crafting intuitive websites with cutting-edge technology.</p>
+            <div class="info">
+                <p>👤 Pugazhendhi K</p>
+                <p>📧 pugazhendhikrishna03@gmail.com</p>
+                <p>📞 +91 7339541974</p>
+                <p>📅 Born on 03 Aug, 2003</p>
+                <p>🎓 Bachelors in Computer Science</p>
+                <p>🏠 Ranipet, TamilNadu 632517, India</p>
+            </div>
+            <h3>Language Skills</h3>
+            <p>Tamil, English</p>
+        </div>
+
+        <div class="tab-content" id="qualifications">
+            <h2>My Awesome Journey</h2>
+            <div class="qualifications-grid">
+                <!-- <div>
+                    <h3>Experience</h3>
+                    <p>📍 ABC Inc. - Software Engineer (2018-2020)</p>
+                    <p>📍 XYZ Corporation - Senior Developer (2020-2022)</p>
+                    <p>📍 Tech Innovators - Lead Developer (2022-Present)</p>
+                </div> -->
+                <div>
+                    <h3>Education</h3>
+                    <p>📚 AIHT - Bachelor of Engineering in Computer science (2020-2025)</p>
+                    <p>📚 RBM Hr Sec School - HSC (2019-2020)</p>
+                    <p>📚 RBM Hr Sec School - HSC (2017-2018)</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="skills">
+            <h2>Tools I Use Everyday</h2>
+            <h3>Skills</h3>
+            <p>✔️ HTML, CSS</p>
+            <p>✔️ JavaScript</p>
+            <p>✔️ ReactJS</p>
+            <p>✔️ Front-end Development</p>
+            <h3>Tools</h3>
+            <div class="icons">
+                <span>🖥️ VS Code</span>
+            </div>
+        </div>
+        </div>
     </section>
 </main>
 
@@ -69,6 +137,7 @@
 
 
 <script src="js/header.js"></script>
+<script src="js/about.js"></script>
 </body>
 </html>
 

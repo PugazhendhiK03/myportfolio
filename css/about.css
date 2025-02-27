@@ -1,0 +1,263 @@
+:root{
+    --primary-color: #f8f9fa;
+    --secondary-color: #ff7373;
+    --text-color: #343a40;
+    --light-color: #797979;
+    --highlight-color: #714e2b;
+}
+
+.about{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.aboutTitle{
+    font-size: 1.6rem;
+    padding: 2rem 0;
+    animation: slideFromLeft 1.5s ease forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+
+.aboutContainer{
+    display: flex;
+}
+
+.about-left{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-left > img{
+    transform: scale(.7);
+    animation: slideFromLeft 1.5s ease forwards;
+    animation-delay: 1.4s;
+    opacity: 0;
+}
+
+.about-right{
+    flex: 3;
+}
+
+.about-right {
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    animation: slideFromRight 1.5s ease forwards;
+    animation-delay: 1.6s;
+    opacity: 0;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid var(--light-color);
+    border-radius: 2rem;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 2rem;
+    margin: 1px;
+}
+
+.tab-btn.active {
+    background: #ff6b6b;
+    color: white;
+}
+
+/* Tab Content */
+.tab-content {
+    display: none;
+    text-align: start;
+}
+.tab-content > p{
+    font-size: 14px;
+    color: var(--light-color);
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Info */
+.info{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-bottom: 1px solid var(--light-color);
+    padding: 1rem 0;
+}
+.info p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+/* Qualifications */
+.qualifications-grid {
+    display: flex;
+    justify-content: space-between;
+}
+
+.qualifications-grid div {
+    width: 48%;
+}
+
+.icons span {
+    display: inline-block;
+    margin-right: 10px;
+    background: #ff9f43;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+
+@media only screen and (max-width:900px){
+    .aboutContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-left{
+        flex: 1;
+    }
+    .about-right{
+        flex: 1;
+        text-align: start;
+    }
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    .aboutContainer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .about-left img {
+        transform: scale(0.8);
+    }
+    .about-right {
+        width: 100%;
+        padding: 15px;
+    }
+    .tabs {
+        /* flex-direction: column; */
+        align-items: center;
+    }
+    .tab-btn {
+        width: 100%;
+        text-align: center;
+    }
+    .info {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .about-left img {
+        transform: scale(0.7);
+    }
+    .tab-btn {
+        font-size: 14px;
+    }
+    .tab-content > h2{
+        font-size: 1.4rem;
+    }
+}
+
+@media only screen and (max-width: 475px) {
+    .aboutTitle {
+        font-size: 1.4rem;
+    }
+    .tab-btn {
+        padding: 8px;
+    }
+    .icons span {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .aboutTitle {
+        font-size: 1.2rem;
+    }
+    .tab-btn {
+        padding: 6px;
+        font-size: 12px;
+    }
+    .qualifications-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .qualifications-grid div {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .about {
+        margin-top: 2rem;
+    }
+    .tab-btn {
+        padding: 5px;
+    }
+    .info p {
+        font-size: 12px;
+    }
+    .icons span {
+        font-size: 11px;
+        padding: 3px 6px;
+    }
+}
+
+@media only screen and (max-width: 325px) {
+    .tab-btn {
+        padding: 4px;
+    }
+    .icons span {
+        font-size: 10px;
+        padding: 3px 5px;
+    }
+}
+
+
+
+/* Slide in from left with opacity */
+@keyframes slideFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Slide in from right with opacity */
+@keyframes slideFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
