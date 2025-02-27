@@ -1,0 +1,89 @@
+:root{
+    --primary-color: #f8f9fa;
+    --secondary-color: #ff7373;
+    --text-color: #343a40;
+    --light-color: #797979;
+}
+
+*{
+    text-decoration: none;
+    list-style: none;
+}
+
+@font-face {
+    font-family: Gumela;
+    src: url('../fonts/Gumela\ Regular.otf');
+}
+
+body{
+    background: var(--primary-color);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gumela';
+    color: var(--text-color);
+}
+
+
+@media only screen and (min-width: 1440px){
+    body{
+        padding: 0 8rem;
+    }
+}
+
+@media only screen and (max-width: 1440px){
+    body{
+        padding: 0 7rem;
+    }
+}
+
+@media only screen and (max-width: 1024px){
+    body{
+        padding: 0 5rem;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    body{
+        padding: 0 3rem;
+    }
+}
+
+
+
+
+/* Slide in from left with opacity */
+@keyframes slideFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Slide in from right with opacity */
+@keyframes slideFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* dropdown animation */
+@keyframes dropdown{
+    0%{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

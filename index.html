@@ -14,273 +14,61 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    
+    <!-- css -->
+     <link rel="stylesheet" href="./css/main.css">
+     <link rel="stylesheet" href="./css/header.css">
+     <link rel="stylesheet" href="./css/intro.css">
 </head>
 <body>
-
-<!-- header -->
-<section class="header">
-    <div class="navigation">
-        <div class="logo">
-            <img src="./img/Logo.png" alt="Logo">
-        </div>
-
-        <div class="navbar" id="navbar">
-            <ul class="navlist" id="navlist">
-                <li><a href="#intro">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <!-- <li><a href="#">Testimonials</a></li> -->
-                <li><a href="#contact">Contact</a></li>
-                <div><button class="chat-btn btn"><a href="https://wa.me/7339541974?text=Hello%2C%20I%20would%20like%20to%20chat%20with%20you" target="_blank">Let's Chat</a> <svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#fff"><path d="M240-400h320v-80H240v80Zm0-120h480v-80H240v80Zm0-120h480v-80H240v80ZM80-80v-720q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H240L80-80Zm126-240h594v-480H160v525l46-45Zm-46 0v-480 480Z"/></svg></button></div>
-            </ul>
-        </div>
-        <div class="menu-icon" id="menu-icon">
+<header class="navbar">
+    <div class="logo">
+        <img src="img/Logo.png" alt="Logo">
+    </div>
+    <div class="nav-options">
+        <div class="menubar" id="menubar">
             <i class="fas fa-bars"></i>
         </div>
+        <ul class="nav-list" id="nav-list">
+            <li><a href="#intro">Home</a></li>
+            <li><a href="#works">My Works</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+        </ul>
     </div>
+</header>
 
-</section>
-
-<!-- sidebar -->
-<div id="sidebar">
-    <div class="close-btn" id="close-btn">
-        <i class="fas fa-times"></i>
-    </div>
-    <ul class="navlist">
-        <li><a href="#intro">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <!-- <li><a href="#">Testimonials</a></li> -->
-        <li><a href="#contact">Contact</a></li>
-        <div><button class="chat-btn btn"><a href="https://wa.me/7339541974?text=Hello%2C%20I%20would%20like%20to%20chat%20with%20you" target="_blank">Let's Chat!</a> <svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#fff"><path d="M240-400h320v-80H240v80Zm0-120h480v-80H240v80Zm0-120h480v-80H240v80ZM80-80v-720q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H240L80-80Zm126-240h594v-480H160v525l46-45Zm-46 0v-480 480Z"/></svg></button></div>
-    </ul>
-</div>
-
-
-
-<!-- section 2 -->
-<section class="main">
-    <div class="profile">
-        
-        <img src="./img/profile.jpeg" alt="profile">
-            <p class="name">Pugazhendhi K</p>
-            <p class="role">Front-End Developer</p>
-            <ul class="social-icon">
-                <li><a href="https://www.linkedin.com/in/pugazhendhi2003"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                <li><a href="https://www.instagram.com/pugazh_0308?igsh=MW10bjFla21wcXBldw=="><i class="fa-brands fa-instagram"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-            </ul>
-            <ul class="c-number-mail">
-                <li><i class="fa fa-solid fa-phone"></i><a href="tel:+91 7339541974"> +91 7339541974</a></li>
-                <li><i class="fa fa-solid fa-envelope"></i><a href="mailto:pugazhendhikrishna03@gmail.com"> pugazhendhikrishna<br>03@gmail.com</a></li>
-            </ul>
-            <!-- <button class="p-lets btn">Let's work together!</button> -->
-        
-    </div>
-
-    <div class="m-content">
-        
-        <!-- home -->
-        <div class="intro" id="intro">
-            <!-- <div class="i-design">
-                <span class="lets"><img src="./img/star.png" alt=""> Let's Meet!</span>
-            </div> -->
-            <span class="i-greet">Hi, I'm</span>
-            <span class="i-name">PUGAZHENDHI K</span>
-            <span class="i-role"><span>Front-End</span> Developer</span>
+<main>
+    <section class="intro" id="intro">
+        <div class="intro-left">
+            <span class="introName">PUGAZHENDHI K</span>
+            <span class="introDesc">
+                I am a Web Developer and a Programmer. I am passionate about coding and I love to learn new things.
+            </span>
             <div class="btns">
-                <div class="i-design">
-                    <span class="lets"><a href="projects.html">My Work <i class="fa-solid fa-qrcode"></i></a></span>
-                </div>
-                <button class="resume-btn btn"><a href="pdf/Pugazhendhi-resume.pdf" download>Download CV</a></button>
+                <a href="#">
+                    <button class="cvBtn">Download CV</button>
+                </a>
+                <a href="#">
+                    <button class="contactBtn">Contact Me</button>
+                </a>
             </div>
         </div>
-
-        <!-- about -->
-         <div class="about" id="about">
-            <div class="about1">
-                <h2 class="a-title">About Me</h2>
-            <p class="a-content">Hi, I'm Pugazhendhi, a Web Developer and Designer with a passion 
-                for Front-End Developer and a Fresher in this field, I've had the opportunity 
-                to work on finalyear projects. I specialize in Front-End Development, and I am constantly 
-                looking to learn and grow in my field.
-            </p>
-            </div>
-            <!-- education -->
-            <div class="education">
-                <h3 class="e-title">Education</h3>
-                <div class="e-grid">
-                    <div class="e-card">
-                        <span class="e-year">2020 - 2024</span>
-                        <span class="e-degree">B.E - CSE</span>
-                        <span class="e-school">Anand Institute Of Higher Technology</span>
-
-                    </div>
-                    <div class="e-card">
-                        <span class="e-year">2019 - 2020</span>
-                        <span class="e-degree">HSC</span>
-                        <span class="e-school">Rathinagiri Bageerathan Matric Hr Sec School</span>
-
-                    </div>
-                    <div class="e-card">
-                        <span class="e-year">2017 - 2018</span>
-                        <span class="e-degree">SSLC</span>
-                        <span class="e-school">Rathinagiri Bageerathan Matric Hr Sec School</span>
-
-                    </div>
-                </div>
-            </div>
-
-            <!-- intrest -->
-             <!-- <div class="intrest">
-                <h3 class="i-title">Interests</h3>
-                <span class="i-content">
-                    When I'm not working, I enjoy Drawings, Designing, Learn about new designs in UI.
-                </span>
-             </div> -->
-
-         </div>
-
-         <!-- skills -->
-          <div class="skills" id="skills">
-            <h2 class="s-title">Skills</h2>
-            <div class="s-grid">
-                <div class="s-card">
-                    <img src="./img/html.png" class="html" alt="HTML">
-                    <p class="s-name">HTML</p>
-                </div>
-                <div class="s-card">
-                    <img src="./img/css.png" class="css" alt="CSS">
-                    <p class="s-name">CSS</p>
-                </div>
-                <div class="s-card">
-                    <img src="./img/js.png" class="js" alt="HTML">
-                    <p class="s-name">JS</p>
-                </div>
-                <div class="s-card">
-                    <img src="./img/py.png" class="python" alt="HTML">
-                    <p class="s-name">PYTHON</p>
-                </div>
-                <div class="s-card">
-                    <img src="./img/react.png" class="react" alt="HTML">
-                    <p class="s-name">REACT</p>
-                </div>
-                <div class="s-card">
-                    <img src="./img/git.png" class="git" alt="git">
-                    <p class="s-name">GIT</p>
-                </div>
-                <div class="s-card">
-                    <img src="./img/github.png" class="github" alt="github">
-                    <p class="s-name">GIT HUB</p>
-                </div>
-                <div class="s-card">
-                    <img src="./img/MySQL.jpg" class="mysql" alt="mysql">
-                    <p class="s-name">MY SQL</p>
-                </div>
-                <div class="s-card">
-                    <img src="./img/VSCode.png" class="vscode" alt="vscode">
-                    <p class="s-name">VS CODE</p>
-                </div>
-                <!-- add more -->
-            </div>
-          </div>
-
-          <!-- projects -->
-          <div class="projects" id="projects">
-            <h2>Projects</h2>
-            <div class="project-container">
-              <div class="p-cards">
-                <div class="project-card project-card-1">
-                  <span class="project-title">Security Surveillance System</span>
-                  <p class="project-description">As a team we made a main project at college, We completed an surveillance system
-                    enhanced with object detection and face recognition, that allows user to find an specific
-                    objects or am individual person
-                    .</p>
-                  <ul class="project-link">
-                    <li><a href="https://github.com/PugazhendhiK03/final-year-project"><i class="fa-solid fa-eye"></i></a></li>
-                    <li><a href="#"><i class="fa-solid fa-link"></i></a></li>
-                </ul>
-                </div>
-                <div class="back-card"></div>
-              </div>
-              <div class="p-cards">
-                <div class="project-card project-card-2">
-                  <span class="project-title">Courier Management System</span>
-                  <p class="project-description">As mini project at college, I completed an courier management system utilising HTML,
-                    CSS, JavaScript, PHP, MySql.
-                    </p>
-                  <ul class="project-link">
-                    <li><a href="https://github.com/PugazhendhiK03/mini-project"><i class="fa-solid fa-eye"></i></a></li>
-                    <li><a href="#"><i class="fa-solid fa-link"></i></a></li>
-                </ul>
-                </div>
-                <div class="back-card"></div>
-              </div>
-              <!-- <div class="p-cards">
-                <div class="project-card project-card-3">
-                  <span class="project-title">Project 3</span>
-                  <p class="project-description">This is a long description of Project 3 that will be truncated if it exceeds two lines. This is just an example text to demonstrate the truncation effect.</p>
-                  <ul class="project-link">
-                    <li><a href="#"><i class="fa-solid fa-eye"></i></a></li>
-                    <li><a href="#"><i class="fa-solid fa-link"></i></a></li>
-                </ul>
-                </div>
-                <div class="back-card"></div>
-              </div> -->
-              <div class="p-cards p-see-all">
-                <a href="projects.html">See All <i class="fa-solid fa-arrow-right"></i></a>
-              </div>
-
-              <!-- Add more cards as needed -->
-            </div>
-          </div>
-          
-          
-          
-
-          <!-- contact -->
-           <div class="contact" id="contact">
-            <div class="c-title">
-                <h2>Contact Me</h2>
-            </div>
-                    <div class="c-container">
-                    
-                                <form class="contactForm" id="contactForm">
-                                <div>
-                                    <label for="name">Name :</label>
-                                    <input type="text" id="name" required name="name">
-                                </div>
-                                <div>
-                                    <label for="email">Email :</label>
-                                    <input type="email" id="email" required name="email">
-                                </div>
-                                <div>
-                                    <label for="message">Message :</label>
-                                    <textarea name="message"  id="message" required cols="30" rows="4"></textarea>
-                                </div>
-                                <div>
-                                    <button type="submit" class="c-btn btn">Submit</button>
-                                </div>
-                            </form>
-                                <span id="msg"></span>
-                    </div>
-           </div>
-
-           <!-- footer -->
-           
-
-    </div>
-
+        <div class="intro-right">
+            <img src="img/profile.png" alt="Intro" class="intoImg">
+        </div>
+    </section>
     
-</section>
+    <section class="about" id="about">
+
+    </section>
+</main>
+
+<footer>
+
+</footer>
 
 
 
-
-<script src="script.js"></script>
+<script src="js/header.js"></script>
 </body>
 </html>
 
