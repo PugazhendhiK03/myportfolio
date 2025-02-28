@@ -33,6 +33,10 @@ body{
     border-radius: 50%;
 }
 
+.btn{
+    box-shadow: 0px 1px 4px var(--light-color);
+}
+
 @media only screen and (min-width: 1440px){
     body{
         padding: 0 8rem;

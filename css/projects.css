@@ -28,13 +28,18 @@
     flex: 2;
 }
 
-.projects-header > span{
+.projects-header > span:nth-child(1){
     display: flex;
     align-items: center;
     gap: .5rem;
     animation: slideFromLeft 1s ease forwards;
     animation-delay: 1.6s;
     opacity: 0;
+}
+
+.project-title{
+    font-size: 1.4rem;
+    font-weight: bold;
 }
 
 .projects-header > p{
