@@ -1,0 +1,95 @@
+:root{
+    --primary-color: #f8f9fa;
+    --secondary-color: #ff7373;
+    --text-color: #343a40;
+    --light-color: #797979;
+    --highlight-color: #714e2b;
+    --background-color: aliceblue;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    margin: 4rem 0;
+}
+
+.contact-left{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-right{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+.contactTitle{
+    color: var(--text-color);
+    font-size: 1.4rem;
+    font-weight: 600;
+    animation: slideFromLeft 1s ease forwards;
+    animation-delay: 2s;
+    opacity: 0;
+}
+
+.contactTitle > span{
+    color: var(--secondary-color);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid var(--highlight-color);
+    border-radius: 5px;
+    outline: none;
+    animation: slideFromRight 1s ease forwards;
+    animation-delay: 2.2s;
+    opacity: 0;
+}
+
+button {
+    background: var(--secondary-color);
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+    font-family: "Gumela";
+    width: auto;
+    animation: slideFromRight 1s ease forwards;
+    animation-delay: 2.5s;
+    opacity: 0;
+}
+
+button:hover {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+}
+
+#statusMessage {
+    margin-top: 10px;
+    font-size: 14px;
+    color: green;
+}
+
+@media only screen and (max-width:570px){
+    .contact{
+        flex-direction: column;
+        gap: 2rem;
+    }
+}

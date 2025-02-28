@@ -4,6 +4,7 @@
     --text-color: #343a40;
     --light-color: #797979;
     --highlight-color: #714e2b;
+    --background-color: aliceblue;
 }
 
 .about{
@@ -73,11 +74,12 @@
     font-weight: bold;
     border-radius: 2rem;
     margin: 1px;
+    color: var(--text-color);
 }
 
 .tab-btn.active {
-    background: #ff6b6b;
-    color: white;
+    background: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 /* Tab Content */

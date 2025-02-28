@@ -4,18 +4,19 @@
     --text-color: #343a40;
     --light-color: #797979;
     --highlight-color: #714e2b;
+    --background-color: aliceblue;
 }
 
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: var(--primary-color);
+    background: var(--background-color);
     position: relative;
     padding: .5rem 0;
 }
 
-.logo > img{
+.logo > a >img{
     width: 50px;
     height: 50px;
     border-radius: 50%;
