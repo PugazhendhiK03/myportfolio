@@ -19,6 +19,7 @@
     animation: slideFromLeft 1.5s ease forwards;
     animation-delay: 1s;
     opacity: 0;
+    font-weight: bold;
 }
 
 .aboutContainer{
@@ -42,6 +43,7 @@
 .about-right{
     flex: 3;
 }
+
 
 .about-right {
     width: 80%;
