@@ -81,6 +81,14 @@
     background: var(--secondary-color);
     color: var(--primary-color);
 }
+.tab-btn.active:hover{
+    color: var(--secondary-color);
+}
+
+.tab-btn:hover{
+    border: none;
+    background: var(--background-color);
+}
 
 /* Tab Content */
 .tab-content {
