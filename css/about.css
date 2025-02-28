@@ -190,6 +190,9 @@
         font-size: 12px;
         padding: 4px 8px;
     }
+    .aboutImg{
+        width: 200px;
+    }
 }
 
 @media only screen and (max-width: 425px) {
@@ -223,6 +226,9 @@
     .icons span {
         font-size: 11px;
         padding: 3px 6px;
+    }
+    .aboutImg{
+        width: 200px;
     }
 }
 
