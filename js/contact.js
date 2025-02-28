@@ -1,19 +1,29 @@
-document.getElementById("contactForm").addEventListener("submit", function(event) {
+document.getElementById("contactForm").addEventListener("submit", async function(event) {
     event.preventDefault();
 
-    let name = document.getElementById("name").value;
-    let email = document.getElementById("email").value;
-    let message = document.getElementById("message").value;
+    let form = event.target;
+    let formData = new FormData(form);
     let statusMessage = document.getElementById("statusMessage");
 
-    if (name && email && message) {
-        statusMessage.textContent = "Message Sent Successfully!";
-        statusMessage.style.color = "green";
+    try {
+        let response = await fetch("https://formspree.io/f/mrgnygog", {
+            method: "POST",
+            body: formData,
+            headers: {
+                "Accept": "application/json"
+            }
+        });
 
-        // Reset form fields
-        document.getElementById("contactForm").reset();
-    } else {
-        statusMessage.textContent = "Please fill all fields!";
+        if (response.ok) {
+            statusMessage.textContent = "Message Sent Successfully!";
+            statusMessage.style.color = "green";
+            form.reset();  // Reset form after successful submission
+        } else {
+            statusMessage.textContent = "Error sending message. Please try again!";
+            statusMessage.style.color = "red";
+        }
+    } catch (error) {
+        statusMessage.textContent = "Network error. Please check your connection!";
         statusMessage.style.color = "red";
     }
 });
