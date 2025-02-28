@@ -16,8 +16,8 @@ function displayProjects(page) {
         <div class="project-card">
             <div class="project-demo">
                 <span class="project-links">
-                <a href=""><i class="fa-solid fa-globe"></i></a>
-                <a href=""><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-solid fa-globe"></i></a>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
                 </span>
                 <img src="${project.image}" alt="${project.title}">
             </div>
