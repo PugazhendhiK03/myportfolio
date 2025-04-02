@@ -3,7 +3,7 @@ import React from 'react';
 import '../styles/Intro.css';
 import IntroImg from '../assets/images/IntroImg.png';
 import { FaGithub, FaInstagram, FaLinkedinIn, FaWhatsapp } from 'react-icons/fa';
-import Resume from '../assets/pdf/PugazhendhiResume.pdf';
+import Resume from '../assets/pdf/PugazhendhiResume.pdf'; //new reumw added
 
 const Intro = () => {
   const phoneNumber = '917339541974'; // Your WhatsApp number without '+' or '00'
