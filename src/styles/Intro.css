@@ -1,0 +1,195 @@
+/* Intro.css */
+:root {
+    --primary-color: #f8f9fa;
+    --secondary-color: #ff7373;
+    --text-color: #343a40;
+    --light-color: #797979;
+    --highlight-color: #714e2b;
+    --background-color: aliceblue;
+  }
+  
+  .intro {
+    padding: 8rem 0;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+  
+  .intro-content {
+    text-align: left;
+  }
+  
+  .intro-subtitle {
+    font-size: 1.2rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+  
+  .intro-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+  
+  .intro-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--light-color);
+    margin-bottom: 2.5rem;
+  }
+  
+  .intro-btns {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-primary {
+    background-color: var(--secondary-color);
+    color: white;
+    border: 2px solid var(--secondary-color);
+  }
+  
+  .btn-primary:hover {
+    background-color: transparent;
+    color: var(--secondary-color);
+  }
+  
+  .btn-secondary {
+    background-color: transparent;
+    color: var(--text-color);
+    border: 2px solid var(--text-color);
+  }
+  
+  .btn-secondary:hover {
+    background-color: var(--text-color);
+    color: white;
+  }
+  
+  .intro-social {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .social-icon {
+    font-size: 1.5rem;
+    color: var(--highlight-color);
+    transition: all 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    color: var(--secondary-color);
+    transform: translateY(-3px);
+  }
+  
+  .intro-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .intro-image img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 992px) {
+    .intro-grid {
+      gap: 2rem;
+    }
+    
+    .intro-title {
+      font-size: 2.2rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .intro {
+      padding: 6rem 0;
+    }
+    
+    .intro-grid {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+    
+    .intro-content {
+      order: 2;
+    }
+    
+    .intro-image {
+      order: 1;
+    }
+    
+    .intro-btns, .intro-social {
+      justify-content: center;
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    
+    .intro-title {
+      font-size: 2rem;
+    }
+    
+    .intro-subtitle {
+      font-size: 1rem;
+    }
+    
+    .intro-btns {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .btn {
+      width: 100%;
+      max-width: 250px;
+    }
+  }
+
+
+  /* Add to your Intro.css */
+.whatsapp-icon {
+  margin-right: 8px;
+  font-size: 1.2em;
+  vertical-align: middle;
+  font-weight: bold;
+}
+
+.btn.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Keep all your existing styles */
