@@ -3,6 +3,8 @@ import '../styles/ProjectsPage.css';
 import PortfolioImg from '../assets/images/Portfolio.png';
 import CCTV from '../assets/images/CCTV.jpg';
 import CMS from '../assets/images/CMS.jpg';
+import WebsiteTemplate from '../assets/images/WebsiteTemplate.png';
+import Taxera from '../assets/images/Taxera.png';
 
 const ProjectsPage = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -52,11 +54,44 @@ const ProjectsPage = () => {
       features: [
         "Responsive design",
         "Project showcase",
-        "Dark mode",
         "Performance optimized",
         "Clean animations"
       ]
-    }
+    },
+    {
+      id: 4,
+      title: "Website Templates",
+      description: "A collection of responsive website templates for various industries.",
+      technologies: ["React", "CSS3", "Responsive Design"],
+      imageUrl: WebsiteTemplate,
+      liveLink: "https://ngt-web-template.netlify.app/",
+      detailedDescription: "A collection of responsive website templates designed for various industries, including e-commerce, blogs, and portfolios. Each template is built with React and CSS3, ensuring a modern look and feel. The templates are fully customizable and optimized for performance, making them suitable for any project.",
+      features: [
+        "Multiple templates",
+        "Industry-specific designs",
+        "Fully customizable",
+        "Performance optimized"
+      ]
+    },
+    {
+      id: 5,
+      title: "Taxera - Tax Consultancy and Services",
+      description: "Website for a tax consultancy firm with modern design and user-friendly navigation.",
+      technologies: ["HTML", "CSS3", "JavaScript"],
+      imageUrl: Taxera,
+      liveLink: "https://taxera.netlify.app/",
+      detailedDescription: "A professional website developed for a tax consultancy firm, Taxera. The website features a modern design, user-friendly navigation, and responsive layout. It includes sections for services offered, client testimonials, and a contact form for inquiries. The site is built with HTML, CSS3, and JavaScript, ensuring compatibility across all devices.", 
+      features: [
+        "Responsive design",
+        "Modern UI",
+        "User-friendly navigation",
+        "SEO optimized",
+        "Fast loading times",
+        "Contact forms",
+        "Client testimonials",
+        "Animations and transitions",
+      ]
+    },
   ];
 
   const openModal = (project) => {
@@ -133,7 +168,7 @@ const ProjectsPage = () => {
                 <div className="modal-links">
                   {selectedProject.liveLink && (
                     <a href={selectedProject.liveLink} target="_blank" rel="noopener noreferrer" className="link-button">
-                      Live Demo
+                      Live Link
                     </a>
                   )}
                 </div>

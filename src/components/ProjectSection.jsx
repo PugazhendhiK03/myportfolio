@@ -2,8 +2,8 @@
 import React from 'react';
 import '../styles/ProjectSection.css';
 import { FaArrowRight } from 'react-icons/fa';
-import CCTV from '../assets/images/CCTV.jpg';
-import CMS from '../assets/images/CMS.jpg';
+import WebsiteTemplate from '../assets/images/WebsiteTemplate.png';
+import Taxera from '../assets/images/Taxera.png';
 import { Link } from 'react-router-dom';
 
 const ProjectSection = () => {
@@ -23,49 +23,47 @@ const ProjectSection = () => {
         <div className="projects-grid">
           <div className="project-card">
             <div className="project-image">
-              <img src={CCTV} alt="CCTV Enhanced By AI" className="project-img" />
+              <img src={WebsiteTemplate} alt="Template1" className="project-img" />
               <div className="project-overlay">
-                <span className="tech-tag">Python</span>
-                <span className="tech-tag">OpenCV</span>
-                <span className="tech-tag">AI</span>
+                <span className="tech-tag">React JS</span>
+                <span className="tech-tag">CSS3</span>
               </div>
             </div>
             <div className="project-info">
-              <h3>CCTV Enhanced By AI</h3>
+              <h3>Website Templates</h3>
               <p>
-                An intelligent surveillance system that uses computer vision to detect
-                suspicious activities in real-time with 92% accuracy.
+                A collection of responsive and modern website templates designed for various industries.
+                Each template is built with React and CSS3, ensuring a seamless user experience.
               </p>
               <div className="project-features">
-                <span>Real-time alerts</span>
-                <span>Object detection</span>
-                <span>Motion tracking</span>
+                <span>Responsive design</span>
+                <span>Modern UI</span>
+                <span>Customizable</span>
               </div>
-              <Link to="projectpage" className="project-link">View Case Study →</Link>
+              <Link to="projectpage" className="project-link">View More →</Link>
             </div>
           </div>
 
           <div className="project-card">
             <div className="project-image">
-              <img src={CMS} alt="Courier Management System" className="project-img" />
+              <img src={Taxera} alt="Template2" className="project-img" />
               <div className="project-overlay">
-                <span className="tech-tag">React</span>
-                <span className="tech-tag">Node.js</span>
-                <span className="tech-tag">MongoDB</span>
+                <span className="tech-tag">HTML</span>
+                <span className="tech-tag">CSS3</span>
+                <span className="tech-tag">JS</span>
               </div>
             </div>
             <div className="project-info">
-              <h3>Courier Management System</h3>
+              <h3>Taxera - Tax Consultansy and Services</h3>
               <p>
-                A full-stack logistics solution that optimizes package tracking,
-                delivery routes, and customer notifications.
+                As Freelancer, I developed a website for a tax consultancy firm, Taxera. The website features a modern design, user-friendly navigation, and responsive layout.
               </p>
               <div className="project-features">
                 <span>Real-time tracking</span>
                 <span>Automated dispatch</span>
                 <span>Customer portal</span>
               </div>
-              <Link to="projectpage" className="project-link">View Case Study →</Link>
+              <Link to="projectpage" className="project-link">View More →</Link>
             </div>
           </div>
         </div>
