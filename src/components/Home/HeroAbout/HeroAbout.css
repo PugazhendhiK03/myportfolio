@@ -1,0 +1,257 @@
+/* --- Root Variables --- */
+:root {
+  --primary-color: #2e4330; /* Dark Green */
+  --secondary-color: #f8a51b; /* Orange/Gold */
+  --primary-text: #2d2d2d; /* Dark Text (used for button text) */
+  --background-color: #ffffff;
+  --font-family: 'Poppins', sans-serif; 
+}
+
+/* --- Hero About Section Styling (Desktop First) --- */
+.hero-about-section {
+  background-color: var(--primary-color); 
+  padding: 100px 5%; 
+  min-height: 80vh; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family);
+  color: white; 
+}
+
+.hero-about-container {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 60px; 
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+  justify-content: center; 
+}
+
+/* --- Left Side: Profile Image --- */
+.hero-about-left {
+  flex: 1; 
+  min-width: 300px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; 
+}
+
+.profile-image {
+  width: 80%; /* Takes 80% of its flex container */
+  border-radius: 50%;
+  object-fit: cover; 
+  object-position: center top; 
+  box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.1); /* Subtle white border effect */
+}
+
+/* --- Right Side: About Me Content --- */
+.hero-about-right {
+  flex: 1; 
+  min-width: 400px; 
+  color: white; 
+  text-align: left; 
+}
+
+.about-me-subtitle {
+  color: var(--secondary-color); 
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.about-me-title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.highlight-name {
+  color: var(--secondary-color); 
+  font-style: italic; 
+  font-weight: 600; 
+}
+
+.about-me-description {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  max-width: 500px; /* Control readability */
+  color: rgba(255, 255, 255, 0.85); 
+}
+
+/* --- Stats Section --- */
+.about-stats {
+  display: flex;
+  gap: 40px; 
+  margin-bottom: 40px;
+  flex-wrap: wrap; 
+}
+
+.stat-item {
+  text-align: left;
+}
+
+.stat-number {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--secondary-color); 
+  display: block; 
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+/* --- Call to Action & Signature --- */
+.about-cta {
+  display: flex;
+  align-items: center;
+  gap: 30px; 
+  flex-wrap: wrap; 
+}
+
+
+.fa-arrow-right {
+  color: var(--primary-text);
+}
+
+/* Signature Placeholder Styling */
+.signature-placeholder {
+  font-family: 'Brush Script MT', 'Lucida Handwriting', cursive; 
+  font-size: 2.5rem; 
+  font-weight: 400;
+  color: var(--secondary-color); 
+  line-height: 1;
+}
+
+/* ==================================================
+        MEDIA QUERIES FOR RESPONSIVENESS
+==================================================
+*/
+
+/* Tablet & Smaller Desktop (Break from side-by-side to stacked layout) */
+@media (max-width: 1024px) {
+    /* 🎨 Container Layout Change: Stack image above content */
+    .hero-about-container {
+        flex-direction: column; 
+        text-align: center; /* Center text content when stacked */
+        gap: 60px; /* Adjusted gap for vertical stacking */
+    }
+
+    .hero-about-left {
+        min-width: unset; 
+        width: 100%; 
+    }
+
+    /* Image Sizing Adjustment */
+    .profile-image {
+        width: 50%; /* Make the circular image smaller when stacked */
+        max-width: 300px; /* Cap the max size */
+        margin: 0 auto; /* Center the image */
+    }
+    
+    .hero-about-right {
+        min-width: unset; 
+        width: 100%; 
+        text-align: center; /* Center all text in the right section */
+    }
+
+    /* Text Adjustments */
+    .about-me-title {
+        font-size: 2.8rem;
+    }
+
+    .about-me-description {
+        max-width: 600px; /* Control max width for readability */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Stats Centering */
+    .about-stats {
+        justify-content: center; 
+        gap: 30px;
+    }
+
+    /* CTA Centering */
+    .about-cta {
+        justify-content: center; 
+    }
+}
+
+/* --- */
+
+/* Smaller Tablets & Large Phones */
+@media (max-width: 768px) {
+    .hero-about-section {
+        padding: 60px 3%; /* Reduced vertical padding */
+    }
+
+    /* Image Sizing Adjustment */
+    .profile-image {
+        width: 60%; 
+        max-width: 250px; 
+    }
+
+    /* Text Adjustments */
+    .about-me-title {
+        font-size: 2.2rem;
+    }
+
+    .about-me-description {
+        max-width: 90%; 
+    }
+}
+
+/* --- */
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+    .hero-about-section {
+        padding: 40px 2%; /* Minimal padding on the smallest screens */
+    }
+
+    /* Image Sizing Adjustment */
+    .profile-image {
+        width: 70%; 
+        max-width: 200px; 
+    }
+    
+    /* Text Adjustments */
+    .about-me-title {
+        font-size: 1.8rem;
+    }
+    .about-me-description {
+        font-size: 0.95rem;
+    }
+
+    /* Stats Stacking/Size */
+    .about-stats {
+        gap: 20px 15px; /* Tighter gap */
+        justify-content: space-around; /* Distribute items evenly */
+    }
+    .stat-number {
+        font-size: 1.8rem;
+    }
+    .stat-label {
+        font-size: 0.8rem;
+    }
+
+    /* CTA Stacking */
+    .about-cta {
+        flex-direction: column; /* Stack the button and signature */
+        gap: 20px;
+    }
+    
+    .signature-placeholder {
+        font-size: 2rem;
+    }
+}

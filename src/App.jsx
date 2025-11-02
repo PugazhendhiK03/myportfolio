@@ -1,24 +1,26 @@
-import React from 'react'
-import './App.css'
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home.jsx'
-import ProjectsPage from './pages/ProjectsPage.jsx'
-import Header from './components/Header.jsx'
-import Footer from './components/Footer.jsx'
+import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar/Navbar'; // adjust path based on your folder structure
+import Home from './pages/Home/Home';
+import PortfolioPage from './pages/Portfolio/PortfolioPage'; // adjust path based on your folder structure
+import Footer from './components/Footer/Footer'; // adjust path based on your folder structure
+import ProjectDetailPage from './pages/Portfolio/ProjectDetailPage'; // New import for project details page
 
 function App() {
-
   return (
     <Router>
-      <Header />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/projectpage' element={<ProjectsPage />} />
-      </Routes>
+      <Navbar />
+      <div className="content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/portfolio" element={<PortfolioPage />} />
+          <Route path="/portfolio/:projectId" element={<ProjectDetailPage />} />
+          <Route path='/contact' element={<Home />} />
+        </Routes>
+      </div>
       <Footer />
     </Router>
-  )
+  );
 }
 
-
-export default App
+export default App;

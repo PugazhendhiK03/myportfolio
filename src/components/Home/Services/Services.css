@@ -1,0 +1,150 @@
+/* --- Services Section Styling --- */
+.services-section {
+    padding: 80px 5%; /* Add some vertical padding and horizontal margin */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Header and Title Group --- */
+.services-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.title-group {
+    /* Ensures the subtitle and title are aligned */
+}
+
+.subtitle {
+    color: #FFA500; /* Use a color close to the gold/yellow in the image */
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.subtitle > span {
+    color: var(--primary-text);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333; /* Dark text for contrast */
+    margin: 0;
+    line-height: 1.2;
+}
+
+.section-title > span {
+    color: var(--secondary-color);
+}
+
+/* --- View All Button --- */
+.view-all-button {
+    background-color: #556B2F; /* Dark olive green background */
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.view-all-button:hover {
+    background-color: #6B8E23; /* Slightly lighter on hover */
+}
+
+.arrow-icon {
+    margin-left: 10px;
+    font-size: 1.2rem;
+}
+
+/* --- Services Grid --- */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 30px;
+}
+
+/* --- Service Card --- */
+.service-card {
+    background-color: #F8F8F8; /* Light gray background for cards */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+.service-icon-container {
+    width: 50px;
+    height: 50px;
+    background-color: #FFF; /* White background for the icon circle */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+    font-size: 1.5rem;
+    color: #556B2F; /* Matching the button color */
+}
+
+.card-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.card-description {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.learn-more {
+    color: #FFA500; /* Matching the subtitle color */
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.learn-more:hover {
+    color: #FF8C00; /* Slightly darker on hover */
+}
+
+/* --- Media Query for smaller screens --- */
+@media (max-width: 768px) {
+    .services-header {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 30px;
+    }
+
+    .view-all-button {
+        margin-top: 20px;
+        width: 100%; /* Full width button on mobile */
+        justify-content: center;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr; /* Stack cards vertically */
+    }
+}

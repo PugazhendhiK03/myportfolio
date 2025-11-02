@@ -1,0 +1,222 @@
+
+/* Base Styles */
+.hero {
+  padding: 50px 20px; /* Padding for all sides */
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+}
+
+.hero__content {
+  display: flex;
+  align-items: center; 
+  gap: 50px; 
+}
+
+/* --- LEFT SECTION (Text) --- */
+.hero__left {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  gap: 25px; 
+}
+
+.hero__greeting-box {
+  color: var(--primary-text);
+  font-size: 16px;
+  font-weight: 500;
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px dashed var(--primary-text);
+  line-height: 1;
+  width: fit-content;
+}
+
+.hero__title {
+  color: var(--primary-text);
+  font-size: 55px;
+  font-weight: 900;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.hero__name {
+  color: var(--secondary-color);
+  position: relative;
+  display: inline-block; 
+}
+
+.hero__name::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0px; 
+  width: 100%;
+  height: 3px;
+  background-color: var(--secondary-color);
+}
+
+.hero__description {
+  color: var(--primary-text);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+/* --- ACTIONS/BUTTONS --- */
+.hero__actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+/* Primary Button: "View My Portfolio" (The container) */
+.btn--primary {
+  background-color: var(--secondary-color);
+  border-radius: 50px;
+  text-decoration: none;
+  padding: 2px 5px 2px 2px; /* Reduced padding here to accommodate inner elements */
+  display: flex;
+  align-items: center;
+  /* Removed padding from the anchor, putting it on btn__name instead */
+  transition: background-color 0.3s;
+  gap: 5px; 
+}
+
+.btn__name {
+  color: var(--background-color);
+  background-color: var(--primary-color);
+  padding: 1rem 1.5rem;
+  border-radius: 2rem;
+  font-weight: 600;
+}
+
+/* Icon Button (Play Button) */
+.btn-icon {
+  text-decoration: none;
+  display: flex;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--background-color);
+  justify-content: center;
+  align-items: center;
+  margin-right: 2px; /* Small gap to keep it inside the primary button */
+}
+
+.fa-play {
+  color: var(--primary-text);
+}
+
+/* Secondary Button: "Hire Me" */
+.btn--secondary {
+  background-color: transparent;
+  color: var(--primary-text);
+  border: 2px solid var(--primary-text);
+  padding: 13px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: border-color 0.3s, color 0.3s;
+}
+
+
+/* --- RIGHT SECTION (Image) --- */
+.hero__right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__image {
+  width: 100%;
+  max-width: 500px; /* Control max size of the image */
+  height: auto;
+  display: block;
+}
+
+/* ==================================== */
+/* --- RESPONSIVE STYLES --- */
+/* ==================================== */
+
+/* Tablet & Smaller Desktop (Max width 1024px) */
+@media (max-width: 1024px) {
+  .hero__content {
+    gap: 30px;
+  }
+
+  .hero__title {
+    font-size: 45px;
+  }
+}
+
+/* Mobile/Tablet Breakpoint (Max width 768px) */
+@media (max-width: 768px) {
+  .hero__content {
+    flex-direction: column; /* Stack left and right content */
+    text-align: center; /* Center text content */
+  }
+
+  /* Order the image section first on mobile */
+  .hero__right {
+    order: 1;
+    margin-bottom: 30px;
+    padding-top: 20px;
+  }
+  
+  /* Order the text section second on mobile */
+  .hero__left {
+    order: 2;
+    align-items: center; /* Center align all children */
+    gap: 20px;
+  }
+
+  .hero__greeting-box {
+    margin: 0 auto; /* Center the greeting box */
+  }
+  
+  .hero__title {
+    font-size: 38px;
+    max-width: 90%;
+  }
+  
+  .hero__description {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .hero__actions {
+    justify-content: center;
+  }
+
+  .hero__image {
+    max-width: 400px;
+  }
+}
+
+/* Small Mobile Breakpoint (Max width 480px) */
+@media (max-width: 480px) {
+  .hero__title {
+    font-size: 32px;
+  }
+  
+  .hero__actions {
+    flex-direction: column; /* Stack buttons vertically */
+    width: 100%;
+    gap: 15px;
+  }
+
+  /* .btn--primary,  */
+  .btn--secondary {
+    width: 90%; /* Make buttons full width (within the 90% container) */
+    max-width: 300px;
+  }
+
+  .btn--primary {
+    padding: 5px;
+  }
+}

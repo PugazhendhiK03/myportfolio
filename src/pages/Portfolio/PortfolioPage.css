@@ -1,0 +1,209 @@
+/* PortfolioPage.css */
+
+/* Define the color variables locally if not globally accessible */
+:root {
+  --primary-color: #2e4330;       /* Dark Green */
+  --secondary-color: #f8a51b;     /* Orange/Amber */
+  --primary-text: #2d2d2d;        /* Dark Text */
+  --background-color: #ffffff;   /* White Background */
+  --font-family: 'Poppins', sans-serif;
+  --border-color: #e0e0e0;        /* Light Gray Border */
+}
+
+/* General Styling */
+.portfolio-page-container {
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-family);
+    color: var(--primary-text);
+    background-color: var(--background-color);
+    line-height: 1.6;
+}
+
+.portfolio-page-container h1,
+.portfolio-page-container h2,
+.portfolio-page-container h3 {
+    color: var(--primary-text);
+    margin-bottom: 15px;
+}
+
+.portfolio-page-container .subtitle {
+    font-size: 1rem;
+    color: var(--secondary-color); /* Accent color */
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.portfolio-page-container .portfolio-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: var(--primary-color);
+}
+
+.portfolio-page-container .portfolio-title span {
+    color: var(--secondary-color); /* Accent color for highlighted words */
+}
+
+/* Hero Section */
+.portfolio-hero {
+    background-color: var(--background-color); /* Dark Green Hero Background */
+    color: var(--primary-color); /* White text on dark green */
+    padding: 100px 5% 80px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 350px;
+}
+
+.portfolio-hero .title,
+.portfolio-hero h1 {
+    color: var(--background-color); /* Ensure title is white in hero */
+}
+
+.portfolio-hero .title span {
+    color: var(--secondary-color); /* Orange highlight */
+}
+
+.portfolio-hero .subtitle {
+    color: var(--secondary-color);
+}
+
+.portfolio-hero .hero-description {
+    font-size: 1.2rem;
+    color: var(--primary-text);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Projects Grid Section */
+.all-projects-grid-section {
+    padding: 80px 5%;
+    background-color: var(--background-color); /* White main section background */
+}
+
+.projects-grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card-full {
+    background-color: var(--background-color); /* White card background */
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card-full:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.project-image-full-wrapper {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+.project-image-full {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-card-full:hover .project-image-full {
+    transform: scale(1.05);
+}
+
+.project-info-full {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-category-full {
+    display: inline-block;
+    background-color: var(--primary-color); /* Dark Green Tag */
+    color: var(--background-color);
+    font-size: 0.85rem;
+    padding: 5px 12px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.project-card-title-full {
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+    color: var(--primary-text);
+}
+
+.project-description-full {
+    font-size: 1rem;
+    color: #6a6a6a; /* Darker gray for description text */
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.view-project-btn-full {
+    display: inline-block;
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.view-project-btn-full:hover {
+    color: var(--primary-color);
+    transform: translateX(5px);
+}
+
+/* Call to Action Section (CTA) */
+.portfolio-cta {
+    background-color: #f7f7f7; /* Light gray background for CTA */
+    padding: 80px 5%;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.portfolio-cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.portfolio-cta p {
+    font-size: 1.1rem;
+    color: #6a6a6a;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .portfolio-hero .title {
+        font-size: 2.5rem;
+    }
+    .projects-grid-wrapper {
+        grid-template-columns: 1fr;
+    }
+}

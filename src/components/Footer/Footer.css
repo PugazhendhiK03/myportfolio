@@ -1,0 +1,185 @@
+:root{
+  --primary-color: #2e4330; 
+  --secondary-color: #f8a51b;
+  --primary-text: #2d2d2d;
+  --background-color: #ffffff;
+  --font-family: 'Poppins', sans-serif;
+  --border-color: #e0e0e0;
+}
+
+
+.footer-section {
+  background-color: var(--primary-color); 
+  color: var(--background-color);
+  padding: 60px 20px 20px; /* More padding top for the main content */
+  font-family: var(--font-family);
+  border-top: 5px solid var(--secondary-color); /* Orange/Gold top border as per design */
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  gap: 30px; 
+}
+
+/* --- Column Styling --- */
+.footer-col {
+  flex: 1; /* Distribute space relatively evenly */
+  min-width: 180px; /* Ensure columns have minimum width */
+}
+
+/* Column 1: Branding & Role */
+.footer-brand {
+    flex-grow: 1.2; /* Give a bit more space to the name */
+}
+
+.footer-logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--secondary-color); 
+  margin-bottom: 5px;
+}
+
+.footer-role {
+  font-size: 14px;
+  color: var(--background-color);
+  margin-top: 0;
+}
+
+/* --- Headings --- */
+.footer-heading {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--background-color);
+  margin-bottom: 20px;
+  position: relative;
+  /* Red line/underline effect from the image */
+}
+
+.footer-heading::after {
+    content: '';
+    display: block;
+    width: 30px; 
+    height: 2px;
+    background-color: var(--secondary-color); /* Orange/Gold line */
+    position: absolute;
+    bottom: -5px; /* Position below the text */
+    left: 0;
+}
+
+
+/* --- Link Lists --- */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--background-color);
+  font-size: 15px;
+  font-weight: 400;
+  transition: color 0.3s ease;
+  display: inline-block; /* Allows padding/margin for better hover area */
+}
+
+.footer-links a:hover {
+  color: var(--secondary-color); /* Orange on hover */
+}
+
+/* --- Social Icons --- */
+.footer-social-icons {
+  display: flex;
+  gap: 15px; 
+  margin-top: 0;
+}
+
+.footer-social-icons a {
+  color: var(--background-color); /* White icons */
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.footer-social-icons a:hover {
+  color: var(--secondary-color); /* Orange on hover */
+}
+
+/* --- Bottom Copyright Section --- */
+.footer-separator {
+    border: 0;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.15); /* Light gray line */
+    margin: 40px auto 20px;
+    max-width: 1200px;
+}
+
+.footer-bottom {
+    text-align: center;
+}
+
+.footer-copyright {
+  font-size: 14px;
+  color: var(--soft-white);
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+  .footer-container {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  
+  .footer-col {
+      flex-basis: calc(50% - 15px); /* Two columns on tablet */
+      margin-bottom: 30px;
+  }
+  
+  /* Reset branding column width */
+  .footer-brand {
+      flex-basis: 100%;
+      text-align: center;
+  }
+  
+  .footer-brand .footer-logo, 
+  .footer-brand .footer-role {
+      text-align: center;
+  }
+  
+  .footer-heading {
+      text-align: center;
+  }
+  
+  /* Center the heading underline */
+  .footer-heading::after {
+      left: 50%;
+      transform: translateX(-50%);
+  }
+
+  .footer-links {
+      text-align: center;
+  }
+  
+  .footer-social-column {
+      flex-basis: 100%; /* Social icons take full width */
+      text-align: center;
+  }
+  
+  .footer-social-icons {
+      justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+    .footer-col {
+        flex-basis: 100%; /* Single column stack on mobile */
+        min-width: unset;
+        margin-bottom: 20px;
+    }
+}
