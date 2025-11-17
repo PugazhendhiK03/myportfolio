@@ -1,25 +1,39 @@
 import React from 'react';
 import './ToolsSkillsSection.css'; // Make sure to update the CSS file name
+import VScode from '../../../assets/images/vscode.png'
+import GitIcon from '../../../assets/images/git.png'
+import GitHubIcon from '../../../assets/images/github.png'
+import PostmanIcon from '../../../assets/images/postman-icon.svg'
+import FigmaIcon from '../../../assets/images/figma.webp'
+
+import HTMLIcon from '../../../assets/images/html.png'
+import CSSIcon from '../../../assets/images/css.webp'
+import JavaScriptIcon from '../../../assets/images/js.png'
+import ReactJSIcon from '../../../assets/images/reactjs.webp'
+import PythonIcon from '../../../assets/images/python.webp'
+import NodeIcon from '../../../assets/images/node.webp'
+import MongoDBIcon from '../../../assets/images/mongo.png'
+
 
 const ToolsSkillsSection = () => {
   // New Tool Data
   const tools = [
-    { name: 'VS Code', icon: 'vscode-icon.png', percentage: 98 },
-    { name: 'Git', icon: 'git-icon.png', percentage: 95 },
-    { name: 'GitHub', icon: 'github-icon.png', percentage: 92 },
-    { name: 'Postman', icon: 'postman-icon.png', percentage: 90 },
-    { name: 'Figma', icon: 'figma-icon.png', percentage: 88 },
+    { name: 'VS Code', icon: VScode, percentage: 98 },
+    { name: 'Git', icon: GitIcon, percentage: 95 },
+    { name: 'GitHub', icon: GitHubIcon, percentage: 92 },
+    { name: 'Postman', icon: PostmanIcon, percentage: 90 },
+    { name: 'Figma', icon: FigmaIcon, percentage: 88 },
   ];
 
   // New Skill Data
   const skills = [
-    { name: 'HTML', icon: 'html-icon.png', percentage: 99 },
-    { name: 'CSS', icon: 'css-icon.png', percentage: 97 },
-    { name: 'JavaScript', icon: 'javascript-icon.png', percentage: 95 },
-    { name: 'ReactJS', icon: 'reactjs-icon.png', percentage: 93 },
-    { name: 'Python', icon: 'python-icon.png', percentage: 90 },
-    { name: 'Node.js', icon: 'node-icon.png', percentage: 88 },
-    { name: 'MongoDB', icon: 'mongodb-icon.png', percentage: 85 },
+    { name: 'HTML', icon: HTMLIcon, percentage: 99 },
+    { name: 'CSS', icon: CSSIcon, percentage: 97 },
+    { name: 'JavaScript', icon: JavaScriptIcon, percentage: 95 },
+    { name: 'ReactJS', icon: ReactJSIcon, percentage: 93 },
+    { name: 'Python', icon: PythonIcon, percentage: 90 },
+    { name: 'Node.js', icon: NodeIcon, percentage: 88 },
+    { name: 'MongoDB', icon: MongoDBIcon, percentage: 85 },
   ];
 
   const renderItems = (items) => (

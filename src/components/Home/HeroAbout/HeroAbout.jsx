@@ -1,6 +1,7 @@
 import React from 'react';
 import './HeroAbout.css';
 // import { FaDownload } from 'react-icons/fa'; // Removed unused import
+import Resume from '../../../assets/pdf/Pugazhendhi.pdf'
 
 // Assuming you have an image asset for the profile picture
 import profileImage from '../../../assets/images/about.png'; // Adjust path as needed
@@ -45,7 +46,7 @@ const HeroAbout = () => {
           {/* Call to Action & Signature */}
           <div className="about-cta">
             {/* Custom button structure */}
-            <a href="/path/to/your-cv.pdf" download className="btn btn--primary">
+            <a href={Resume} download className="btn btn--primary">
               <span className='btn__name'>Download CV</span>
               <div className="btn-icon">
                 {/* Assuming Font Awesome is linked globally */}
