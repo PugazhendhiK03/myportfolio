@@ -137,6 +137,7 @@
   max-width: 500px; /* Control max size of the image */
   height: auto;
   display: block;
+  border-radius: 50%;
 }
 
 /* ==================================== */
